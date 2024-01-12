@@ -1,0 +1,14 @@
+.descbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.descbox div:nth-child(2) {
+  text-align: center;
+}
+.desc{
+  background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

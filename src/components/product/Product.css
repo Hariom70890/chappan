@@ -1,0 +1,25 @@
+.meals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+.mealcompo div:nth-child(1) {
+  width: 100%;
+  height: 60%;
+}
+.mealcompo div:nth-child(1) > img {
+  width: 100%;
+  height: 200px;
+}
+
+.mealcompo::nth-child(2) {
+  width: 100%;
+  height: 38%;
+}
+.pdbox{
+  background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

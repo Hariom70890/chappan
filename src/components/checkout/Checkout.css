@@ -1,0 +1,33 @@
+.chk{
+    background-image: url("./img1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: .1px solid grey;
+}
+
+.chkmain {
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 500px;
+    width:80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+   
+
+}
+
+.chkmain input{
+    width:300px;
+    height: 20px;
+}
+.cbtn{
+    margin-top: 20px;
+}
+.paynow{
+    display: flex;
+    width:45%;
+    padding:10px;
+    margin:0px;
+    margin-left: 32vh;
+}

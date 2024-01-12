@@ -1,0 +1,34 @@
+.loginbox {
+  width: 35%;
+  height: 380px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+.formlog {
+  width: 90%;
+  height: 30px;
+  margin: auto;
+  border-radius: 5px;
+}
+.loginbtn {
+  width: 25%;
+  height: 34px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+}
+.loginbtn:hover {
+  cursor: pointer;
+  color: white;
+}
+.lgbox {
+  background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* height: 440px; */
+  margin-top: -20px;
+}

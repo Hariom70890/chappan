@@ -1,0 +1,28 @@
+.abt{
+  background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: -20px;
+}
+
+
+.aboutbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  gap: 20px;
+  margin: auto;
+}
+.aboutbox div:nth-child(1) {
+  width: 100%;
+  text-align: center;
+}
+.aboutbox div:nth-child(2) {
+  width: 100%;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+.aboutbox div:nth-child(2) > img {
+  width: 100%;
+  height: 100%;
+}
