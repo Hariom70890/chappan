@@ -4,7 +4,7 @@ This is a entirely new website called Chappan. It is famous food area in Indore 
 
 ### Vercel Link
 
-[https://chappan.netlify.app/](https://chappan.vercel.app/)
+[https://chappan.vercel.app/](https://chappan.vercel.app/)
 
 
 ---
