@@ -2,16 +2,16 @@
 This is a entirely new website called Chappan. It is famous food area in Indore city, where you can eat 56 types of delicious meals at one place on affordable prices with great taste and feel of heaven. 
 ---
 
-### Netlify Link
+### Vercel Link
 
-https://chappan.netlify.app/
+[https://chappan.netlify.app/](https://chappan.vercel.app/)
 
 
 ---
 
 ### Team Member
 
-- **[Dhruv Gupta]**
+- **[Hariom Verma]**
 
 ---
 
@@ -58,7 +58,7 @@ https://chappan.netlify.app/
 
 ![](https://miro.medium.com/max/786/1*Pp5_uAXmtRtJC3mQowyrGg.webp)
 
-### Netlify Link
+### Vercel Link
 
-https://chappan.netlify.app/
+[https://chappan.vercel.app/](https://chappan.vercel.app/)
 # chappan
