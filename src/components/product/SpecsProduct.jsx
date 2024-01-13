@@ -4,8 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../redux/cart/action";
 import { Link } from "react-router-dom";
 import { addItemName } from "../redux/Item/ItemAction";
+import { Box } from "@mui/material";
+import Swal from 'sweetalert2'
 
+// or via CommonJS
 export const SpecsProduct = ({ name, image, price, btnText, id }) => {
+  const Swal = require('sweetalert2')
   const dispatch = useDispatch();
   const AddCart = () => {
     const payload = {
@@ -14,23 +18,29 @@ export const SpecsProduct = ({ name, image, price, btnText, id }) => {
       Image: image,
       Price: price,
     };
-
-    alert("Item Added to cart");
+    
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Item Added to Cart",
+      showConfirmButton: false,
+      timer: 1500
+    });
     dispatch(addTodo(payload));
   };
 
   return (
     <>
-      <div>
+      <Box>
         <Image height={"100%"} src={image} alt="" />
-      </div>
-      <div>
+      </Box>
+      <Box>
         <h3>Dish :- {name}</h3>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <Box style={{ display: "flex", justifyContent: "space-around" }}>
           <p> price :- {price.substring(0, 3)}.00 ₹</p>
           <p>rating :- {(Math.random() * (10 - 1 + 1)).toFixed(1)} ★</p>
-        </div>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        </Box>
+        <Box style={{ display: "flex", justifyContent: "space-around" }}>
           <Button onClick={AddCart}>{btnText}</Button>
           <Button
             onClick={() => {
@@ -39,8 +49,8 @@ export const SpecsProduct = ({ name, image, price, btnText, id }) => {
           >
             <Link to={"/description"}>Show Details</Link>
           </Button>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 };

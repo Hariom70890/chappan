@@ -1,13 +1,11 @@
-.ntbox{
-    width: 90%;
-    height: 600px;
-    margin: auto;
+.ntbox {
+   width: 90%;
+   height: 600px;
+   margin: auto;
 }
 
-.ntbox>img{
-
-    width: 100%;
-    height: 100%;
-
-
+.ntbox > img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }

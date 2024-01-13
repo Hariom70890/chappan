@@ -6,6 +6,7 @@ import "./Product.css";
 import { Button } from "antd";
 
 import { useDispatch } from "react-redux";
+import { Box } from "@mui/material";
 
 export const Product = () => {
   const [meals, setMeals] = useState([]);
@@ -36,8 +37,8 @@ export const Product = () => {
   if (!meals) return null;
 
   return (
-    <div className="pdbox">
-      <div className="box">
+    <Box className="pdbox">
+      <Box className="box">
         {arr.map((v, i) => {
           return (
             <>
@@ -47,11 +48,11 @@ export const Product = () => {
             </>
           );
         })}
-      </div>
-      <div className="meals">
+      </Box>
+      <Box className="meals">
         {meals.map((e, i) => {
           return (
-            <div className="mealcompo">
+            <Box className="mealcompo">
               <SpecsProduct
                 name={e.strMeal}
                 image={e.strMealThumb}
@@ -59,10 +60,10 @@ export const Product = () => {
                 btnText={"Add To cart"}
                 id={i * 5}
               />
-            </div>
+            </Box>
           );
         })}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };

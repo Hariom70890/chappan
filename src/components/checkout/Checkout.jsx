@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/cart/action";
 import "./Checkout.css";
+import Swal from 'sweetalert2'
 
+// or via CommonJS
 export const Checkout = () => {
+  const Swal = require('sweetalert2')
   const items = useSelector((state) => state.cart.todos);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -14,10 +17,16 @@ export const Checkout = () => {
   const HandleCheckout = (e) => {
     e.preventDefault();
     if(pay!=="on"){
-      alert("Please choose payment method");
+      Swal.fire("Please choose payment method!");
       return;
     }
-    alert("Order Confirmed");
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Order Confirmed",
+      showConfirmButton: false,
+      timer: 1500
+    });
     dispatch(clearCart());
     navigate("/");
   };
