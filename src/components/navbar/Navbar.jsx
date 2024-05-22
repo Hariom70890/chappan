@@ -101,7 +101,7 @@ export const Navbar = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            paddingY: 2,
+            paddingY: 2,  
           }}
           role="presentation"
           onClick={closeDrawer}
@@ -171,7 +171,7 @@ export const Navbar = () => {
           <Typography
             variant="h4"
             component="div"
-            sx={{ textAlign: "center", marginTop: -20, marginBottom: 2 }}
+            sx={{ textAlign: "center", marginTop: -20, marginBottom: 2,color:"white" }}
           >
             Discover the best food
           </Typography>

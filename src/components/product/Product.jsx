@@ -1,17 +1,16 @@
+// Product.jsx
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { SpecsProduct } from "./SpecsProduct";
 import "./Product.css";
 import { Button } from "antd";
-
 import { useDispatch } from "react-redux";
 import { Box } from "@mui/material";
 
 export const Product = () => {
   const [meals, setMeals] = useState([]);
   const dispatch = useDispatch();
-
   const [text, setText] = useState("Italian");
   const arr = [
     "American",
@@ -41,18 +40,16 @@ export const Product = () => {
       <Box className="box">
         {arr.map((v, i) => {
           return (
-            <>
-              <Button key={i} className="cat" onClick={() => HandleChange(v)}>
-                {v}
-              </Button>
-            </>
+            <Button key={i} className="cat" onClick={() => HandleChange(v)}>
+              {v}
+            </Button>
           );
         })}
-      </Box>
+      </Box>  
       <Box className="meals">
         {meals.map((e, i) => {
           return (
-            <Box className="mealcompo">
+            <Box key={i} className="mealcompo">
               <SpecsProduct
                 name={e.strMeal}
                 image={e.strMealThumb}

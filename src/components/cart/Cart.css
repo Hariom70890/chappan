@@ -1,8 +1,13 @@
+/* Cart.css */
 .main {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-image: url("./img1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .emptycart {
@@ -16,13 +21,16 @@
   width: 100%;
   margin: auto;
 }
+
 .emptycart div:nth-child(1) > img {
   height: 100%;
   width: 100%;
 }
+
 .emptycart div:nth-child(2) {
   text-align: center;
 }
+
 .emptycart div:nth-child(2) > button {
   border: none;
   background-color: orangered;
@@ -31,47 +39,72 @@
   padding: 20px 40px;
   border-radius: 10px;
 }
-.main1 {
+
+.cart-items {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 70%;
-  gap: 30px;
-  margin-top: 20px;
-  text-align: center;
-}
-.main2 {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 10px;
-  width: 25%;
-  padding: 20px;
-  height: 300px;
-  text-align: left;
-}
-.main2 > div {
-  display: flex;
-  margin: 10px;
-}
-.main2 > div > p {
-  width: 70%;
-  margin: 0px;
-  padding: 0px;
-}
-.cartdiv div:nth-child(1) {
-  width: 100%;
-  height: 60%;
-}
-.cartdiv div:nth-child(1) > img {
-  width: 100%;
-  height: 200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-.cartdiv div:nth-child(2) {
-  width: 100%;
-  height: 38%;
+.cart-item {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
 }
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-summary {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 10px;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+
+.cart-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
 .checkdiv {
   color: white;
 }
+
 .checkdiv:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 10px;
+  }
+
+  .cart-items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item-details {
+    padding: 5px;
+  }
 }

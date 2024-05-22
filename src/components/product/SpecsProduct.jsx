@@ -17,6 +17,7 @@ export const SpecsProduct = ({ name, image, price, btnText, id }) => {
       Name: name,
       Image: image,
       Price: price,
+      Quantity: 1,
     };
     
     Swal.fire({
@@ -37,7 +38,7 @@ export const SpecsProduct = ({ name, image, price, btnText, id }) => {
       <Box>
         <h3>Dish :- {name}</h3>
         <Box style={{ display: "flex", justifyContent: "space-around" }}>
-          <p> price :- {price.substring(0, 3)}.00 ₹</p>
+          <p> price :- ₹{price.substring(0, 3)}.00 </p>
           <p>rating :- {(Math.random() * (10 - 1 + 1)).toFixed(1)} ★</p>
         </Box>
         <Box style={{ display: "flex", justifyContent: "space-around" }}>

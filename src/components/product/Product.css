@@ -1,29 +1,128 @@
+/* Product.css */
 .meals {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 20px;
   margin-top: 20px;
   text-align: center;
-}
-.mealcompo div:nth-child(1) {
-  width: 100%;
-  height: 60%;
-}
-.mealcompo div:nth-child(1) > img {
-  width: 100%;
-  height: 200px;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.mealcompo::nth-child(2) {
-  width: 100%;
-  height: 38%;
+.mealcompo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 300px;
 }
-.pdbox{
+
+.mealcompo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mealcompo h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.mealcompo .details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.mealcompo .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pdbox {
   background-image: url("./img1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
-.box{
-  /* border: 1px solid red; */
+
+
+.box {
+  display: flex;
+  justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cat {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.cat:hover {
+  background-color: #f0f0f0;
+}
+
+@media (width<800px) {
+  .pdbox .box{
+    display: none;
+  }
+ 
+}
+@media (max-width: 1200px) {
+  .meals {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mealcompo {
+    max-width: 250px;
+  }
+
+  .box {
+    /* i want to hide it */
+    display: none;
+    /* justify-content: center; */
+  }
+}
+
+@media (max-width: 576px) {
+  .meals {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    display: none;
+  }
+
+  .cat {
+    margin-bottom: 10px;
+  }
 }

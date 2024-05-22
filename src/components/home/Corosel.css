@@ -1,11 +1,17 @@
 .slide .sldImage {
-  height: 450px;
+  height: 550px;
   width: 90%;
   margin: auto;
+  object-fit: cover;
 }
 .coro{
-  background-image: url("./img1.jpg");
+  /* background-image: url("./img1.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin-top: -22px;
+  margin-top: -22px; */
+    background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+  text-align: center;
 }

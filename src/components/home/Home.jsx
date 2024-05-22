@@ -33,7 +33,6 @@ export const Home = () => {
       .then((data) => {
         setMeals(data.data.meals);
       });
-
     return () => {};
   }, [text]);
 
@@ -41,43 +40,40 @@ export const Home = () => {
     <div className="classbgcolor">
       <div>
         <Corosel />
-
         <div className="box">
-          {arr.map((v) => {
-            return (
-              <>
-                <Button className="cat" onClick={() => HandleChange(v)}>
-                  {v}
-                </Button>
-              </>
-            );
-          })}
+          {arr.map((v, index) => (
+            <Button key={index} className="cat" onClick={() => HandleChange(v)}>
+              {v}
+            </Button>
+          ))}
         </div>
-
         <div className="Main">
-          <ImageList className="imglst" sx={{ height: 350 }} gap={20}  cols={4} rowHeight={350}>
-            {meals.map((e) => {
-              return (
-                <div className="classbgcolor">
-                  <ImageListItem key={e.img}>
-                    <img
-                      src={`${e.strMealThumb}?w=164&h=164&fit=crop&auto=format`}
-                      srcSet={`${e.strMealThumb}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                      alt={e.strMeal}
-                      loading="lazy"
-                    />
-                    <Button>{e.strMeal}</Button>
-                    <Button
-                      onClick={() => {
-                        dispatch(addItemName(e.strMeal));
-                      }}
-                    >
-                      <Link to={"/description"}>Show Details</Link>
-                    </Button>
-                  </ImageListItem>
+          <ImageList
+            className="imglst"
+            sx={{ height: "500px" }}
+            gap={20}
+            cols={4}
+            // rowHeight={350}
+          >
+            {meals.map((e) => (
+              <ImageListItem key={e.idMeal}>
+                <img
+                  src={`${e.strMealThumb}?w=164&h=164&fit=crop&auto=format`}
+                  srcSet={`${e.strMealThumb}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  alt={e.strMeal}
+                  loading="lazy"
+                />
+                <div className="overlay">
+                  <div className="meal-title">{e.strMeal}</div>
+                  <Link
+                    to={"/description"}
+                    onClick={() => dispatch(addItemName(e.strMeal))}
+                  >
+                    <Button className="show-detail-btn">Show Details</Button>
+                  </Link>
                 </div>
-              );
-            })}
+              </ImageListItem>
+            ))}
           </ImageList>
         </div>
       </div>
